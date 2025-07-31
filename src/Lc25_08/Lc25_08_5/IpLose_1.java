@@ -1,4 +1,4 @@
-package Lc25_08;
+package Lc25_08.Lc25_08_5;
 
 import java.util.Arrays;
 import java.util.HashMap;
