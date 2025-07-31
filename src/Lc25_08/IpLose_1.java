@@ -3,7 +3,7 @@ package Lc25_08;
 import java.util.Arrays;
 import java.util.HashMap;
 
-public class IpLose_1108 {
+public class IpLose_1 {
     //两数之和
     //数组问题
     public static void main(String[] args) {
