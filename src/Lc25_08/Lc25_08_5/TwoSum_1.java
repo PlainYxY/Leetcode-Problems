@@ -3,9 +3,8 @@ package Lc25_08.Lc25_08_5;
 import java.util.Arrays;
 import java.util.HashMap;
 
-public class IpLose_1 {
-    //两数之和
-    //数组问题
+public class TwoSum_1 {
+    //两数之和(数组问题)
     public static void main(String[] args) {
         // 示例测试
         int[] nums1 = {2, 7, 11, 15};
@@ -21,9 +20,9 @@ public class IpLose_1 {
         System.out.println("示例3: " + Arrays.toString(twoSum(nums3, target3))); // 输出 [0,1]
     }
 
+    //2ms   99%
+    //先拿和，依次减每一个数，比较是否在HashMap中，不在则把这个数放入Map
     public static int[] twoSum(int[] nums, int target) {
-
-        //2ms   99%
         HashMap<Integer, Integer> map = new HashMap<>();
         for (int i = 0; i < nums.length; i++) {
             int complement = target - nums[i];
@@ -34,20 +33,20 @@ public class IpLose_1 {
         }
         //如果没有匹配成功，则返回空数组
         return new int[]{};
-
-        //55ms  20%
-        //先拿到数组两次遍历寻找
-        //for (int i = 0; i < nums.length; i++) {
-        //    for (int j = i + 1; j < nums.length; j++) {
-        //        if (nums[i] + nums[j] == target) {
-        //            return new int[]{i, j};
-        //        }
-        //    }
-        //}
-        ////如果没有匹配成功，则返回空数组
-        //return new int[]{};
     }
 
-
+    //55ms  20%
+    //1.先拿到数组两次遍历寻找
+    /*public static int[] twoSum(int[] nums, int target) {
+        for (int i = 0; i < nums.length; i++) {
+            for (int j = i + 1; j < nums.length; j++) {
+                if (nums[i] + nums[j] == target) {
+                    return new int[]{i, j};
+                }
+            }
+        }
+        //如果没有匹配成功，则返回空数组
+        return new int[]{};
+    }*/
 
 }
