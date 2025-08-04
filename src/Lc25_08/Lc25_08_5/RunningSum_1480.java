@@ -29,7 +29,7 @@ public class RunningSum_1480 {
 
 
     //0ms   100%
-    //md,想复杂了，一层循环也可以
+    //2.md,想复杂了，一层循环也可以
     /*public static int[] runningSum(int[] nums) {
         int[] arr = new int[nums.length];
         int num = 0;
