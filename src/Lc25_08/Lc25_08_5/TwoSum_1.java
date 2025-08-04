@@ -3,8 +3,8 @@ package Lc25_08.Lc25_08_5;
 import java.util.Arrays;
 import java.util.HashMap;
 
+// [25.7.31] 两数之和(数组问题)
 public class TwoSum_1 {
-    //两数之和(数组问题)
     public static void main(String[] args) {
         // 示例测试
         int[] nums1 = {2, 7, 11, 15};
@@ -21,6 +21,7 @@ public class TwoSum_1 {
     }
 
     //2ms   99%
+    //todo map.containsKey(),containsValue()方法可以查询是否包含元素
     //先拿和，依次减每一个数，比较是否在HashMap中，不在则把这个数放入Map
     public static int[] twoSum(int[] nums, int target) {
         HashMap<Integer, Integer> map = new HashMap<>();

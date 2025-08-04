@@ -1,6 +1,6 @@
 package Lc25_08.Lc25_08_5;
 
-// [1108]Ip地址无效化
+// [25.8.1] Ip地址无效化
 public class IpLose_1108 {
     public static void main(String[] args) {
         //输入样例

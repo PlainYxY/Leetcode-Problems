@@ -1,5 +1,6 @@
 package Lc25_08.Lc25_08_5;
 
+// [25.8.4] 一维数组的动态和
 public class RunningSum_1480 {
     public static void main(String[] args) {
         int[] ints1 = runningSum(new int[]{1, 2, 3, 4});
@@ -41,7 +42,7 @@ public class RunningSum_1480 {
 
 
     //3ms   3%
-    //1.todo 小脑瓜直接就想到两层循环遍历，但是果不其然时间复杂度高
+    //1.小脑瓜直接就想到两层循环遍历，但是果不其然时间复杂度高
     /* public static int[] runningSum(int[] nums) {
         int[] arr = new int[nums.length];
         for (int i = 0; i < nums.length; i++) {

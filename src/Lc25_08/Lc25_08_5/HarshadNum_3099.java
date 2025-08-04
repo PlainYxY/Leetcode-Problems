@@ -1,6 +1,6 @@
 package Lc25_08.Lc25_08_5;
 
-//哈沙德数
+// [25.8.4] 哈沙德数
 public class HarshadNum_3099 {
     public static void main(String[] args) {
         System.out.println(sumOfTheDigitsOfHarshadNumber(18));

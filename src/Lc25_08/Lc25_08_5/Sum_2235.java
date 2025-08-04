@@ -1,6 +1,6 @@
 package Lc25_08.Lc25_08_5;
 
-// [2235]两整数相加
+// [25.7.31] 两整数相加
 public class Sum_2235 {
     public static void main(String[] args) {
         System.out.println(sum(12,5));  // 输出 17
