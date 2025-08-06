@@ -20,10 +20,16 @@ public class BusyStudent_1450 {
 }
 
 
-//
+// 0ms  100%
+// 1.别的不管，先他娘的试试for，然后各自和那个数比大小
 class Solution1450 {
     public int busyStudent(int[] startTime, int[] endTime, int queryTime) {
-
-        return 0;
+        int ans = 0;
+        for (int i = 0; i < startTime.length; i++) {
+               if (startTime[i] <= queryTime && queryTime <= endTime[i] ) {
+                   ans++;
+               }
+        }
+        return ans;
     }
 }
