@@ -27,6 +27,7 @@ public class IsPrefixOfWord_1455 {
 class Solution1455 {
     public int isPrefixOfWord(String sentence, String searchWord) {
         String[] words = sentence.split(" ");
+
         return 0;
     }
 }
