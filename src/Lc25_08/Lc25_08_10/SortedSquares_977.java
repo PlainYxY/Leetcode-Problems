@@ -13,21 +13,17 @@ public class SortedSquares_977 {
 
         //输出：[0,1,9,16,100]
         int[] ints1 = solution977.sortedSquares(new int[]{-4,-1,0,3,10});
-        for (int int1 : ints1) {
-            System.out.print(int1 + ",");
-        }
+        System.out.println(Arrays.toString(ints1));
         System.out.println();
         //输出：[4,9,9,49,121]
         int[] ints2 = solution977.sortedSquares(new int[]{-7,-3,2,3,11});
-        for (int int2 : ints2) {
-            System.out.print(int2 + ",");
-        }
+        System.out.println(Arrays.toString(ints2));
         System.out.println();
     }
 }
 
 
-// 3.
+// 3.双指针解法
 class Solution977 {
     public int[] sortedSquares(int[] nums) {
 
