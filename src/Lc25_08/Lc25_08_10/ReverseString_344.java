@@ -28,7 +28,7 @@ class Solution344 {
         int left = 0;
         int right = s.length - 1;
         char temp;
-        while(left < s.length / 2) {
+        while(left < right) {
             //交换
             temp = s[right];
             s[right] = s[left];
