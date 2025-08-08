@@ -1,8 +1,9 @@
 package Lc25_08.Lc25_08_10;
 
 import java.util.Arrays;
+import java.util.HashMap;
 
-//  [25.8.7] 有序数组的平方
+//  [25.8.7] 两数之和||-输入有序数组
 /**
  *给定一个已按照 升序排列  的整数数组 numbers ，请你从数组中找出两个数满足相加之和等于目标数 target。
  * 函数应该以长度为 2 的整数数组的形式返回这两个数的下标值。numbers 的下标 从 0 开始计数，
@@ -27,9 +28,58 @@ public class twoSum_LCR_6 {
 
 
 //
-// 1.
+// 2.双指针解法，（相加之和 与目标数的比较）（左右数和目标数的比较，设置左数小于等于目标数，右数大于目标数字）
 class SolutionLCR6 {
     public int[] twoSum(int[] numbers, int target) {
-        return  null;
+        int left = 0;
+        int right = numbers.length-1;
+        while (left < right) {
+            //等于
+            if (numbers[left] + numbers[right] == target) {
+                return new int[]{left,right};
+            }
+            //相加大于目标数
+            else if (numbers[left] + numbers[right] > target) {
+                left++;
+                if (numbers[left] + numbers[right] == target) {
+                    return new int[]{left,right};
+                }
+                right--;
+                if (numbers[left] + numbers[right] == target) {
+                    return new int[]{left,right};
+                }
+            }
+            //相加小于目标数
+            else {
+                right++;
+                if (numbers[left] + numbers[right] == target) {
+                    return new int[]{left+1,right+1};
+                }
+                left--;
+                if (numbers[left] + numbers[right] == target) {
+                    return new int[]{left+1,right+1};
+                }
+            }
+        }
+        return new int[]{};
     }
 }
+
+
+// 2ms  16%
+// 1.这是力扣第一题-<两数之和>的解法，速度还是慢
+/*
+class SolutionLCR6 {
+    public int[] twoSum(int[] numbers, int target) {
+        HashMap<Integer, Integer> map = new HashMap<>();
+        for (int i = 0; i < numbers.length; i++) {
+            int complement = target - numbers[i];
+            if (map.containsKey(complement)) {
+                return new int[]{map.get(complement), i};
+            }
+            map.put(numbers[i], i);
+        }
+        //如果没有匹配成功，则返回空数组
+        return new int[]{};
+    }
+}*/

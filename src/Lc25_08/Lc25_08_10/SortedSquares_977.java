@@ -1,11 +1,10 @@
 package Lc25_08.Lc25_08_10;
 
-// [25.8.6] 有序数组的平方
-
 import java.util.Arrays;
 
+// [25.8.6] 有序数组的平方
 /**
-* 给你一个按 非递减顺序 排序的整数数组 nums，返回 每个数字的平方 组成的新数组，要求也按 非递减顺序 排序。
+* 给你一个按 递增顺序 排序的整数数组 nums，返回 每个数字的平方 组成的新数组，要求也按 递增顺序 排序。
 * */
 public class SortedSquares_977 {
     public static void main(String[] args) {
@@ -32,7 +31,7 @@ class Solution977 {
 }
 
 
-// 2.官方题解一  todo Arrays.sort(arr)方法 {快速递增的给数组排序，时杂为nlogn};
+// 2.官方题解一  todo Arrays.sort(arr)方法 {快速递增的给数组排序，时杂O(nlogn)};
 /*
 class Solution977 {
     public int[] sortedSquares(int[] nums) {
