@@ -3,7 +3,7 @@ package Lc25_08.Lc25_08_10;
 import java.util.Arrays;
 import java.util.HashMap;
 
-//  [25.8.7] 两数之和||-输入有序数组
+//  [25.8.8] 两数之和||-输入有序数组
 
 /**
  * 给定一个已按照 升序排列  的整数数组 numbers ，请你从数组中找出两个数满足相加之和等于目标数 target。
