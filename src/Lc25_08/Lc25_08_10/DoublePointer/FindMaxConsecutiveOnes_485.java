@@ -1,4 +1,4 @@
-package Lc25_08.Lc25_08_10;
+package Lc25_08.Lc25_08_10.DoublePointer;
 
 // [25.8.9（快慢指针）] 最大连续1的个数
 /**

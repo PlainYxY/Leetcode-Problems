@@ -1,7 +1,6 @@
-package Lc25_08.Lc25_08_10;
+package Lc25_08.Lc25_08_10.DoublePointer;
 
 import java.util.Arrays;
-import java.util.HashMap;
 
 //  [25.8.8] 两数之和||-输入有序数组
 

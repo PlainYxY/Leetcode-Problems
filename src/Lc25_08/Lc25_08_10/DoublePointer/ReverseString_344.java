@@ -1,4 +1,4 @@
-package Lc25_08.Lc25_08_10;
+package Lc25_08.Lc25_08_10.DoublePointer;
 
 import java.util.Arrays;
 
