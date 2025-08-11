@@ -8,7 +8,7 @@ package Lc25_08.Lc25_08_10.DoublePointer;
  */
 public class MinSubArrayLen_LCR_8 {
     public static void main(String[] args) {
-        Solution8 solution8 = new Solution8();
+        SolutionLCR8 solution8 = new SolutionLCR8();
         // 2
         System.out.println(solution8.minSubArrayLen(7,new int[]{2,3,1,2,4,3}));
         // 1
@@ -21,7 +21,7 @@ public class MinSubArrayLen_LCR_8 {
 }
 
 // 2.官方-滑动窗口解法
-class Solution8 {
+class SolutionLCR8 {
     public int minSubArrayLen(int target, int[] nums) {
         int ans = Integer.MAX_VALUE;
         int slow = 0;
