@@ -27,9 +27,22 @@ public class Merge_56 {
 }
 
 
+// 原来因为数组不是顺序排列，写的有问题，看题解后偷了一个排列，先按照one位大小排列
+    /*
+    Arrays.sort(intervals, (a, b) -> {
+        return a[0] - b[0];
+    });
+    */
+// 然后万一 left two 大于 right two 多加入一层判断
+
 //
 class Solution56 {
     public int[][] merge(int[][] intervals) {
+
+        Arrays.sort(intervals, (a, b) -> {
+            return a[0] - b[0];
+        });
+
         // 第一位第二位
         int one = 0,two = 1;
         // 左、右指针
@@ -40,14 +53,21 @@ class Solution56 {
         // 先把第一个数组赋值给答案数组
         ansArr[0] = intervals[0];
         while (right < intervals.length) {
-            // 情况1，left的two比right的one要 大
-            if (intervals[left][two] >= intervals[right][one]) {
+            // 情况1，left的two比right的one要 大 && left的two比right的two要 小
+            if (intervals[left][two] >= intervals[right][one] && intervals[left][two] <= intervals[right][two]) {
                 // 那就把右指针数组的two 赋值给 答案数组的two
                 ansArr[arrRowNum][two] = intervals[right][two];
                 // 左、右指针都右移
                 left++;
                 right++;
-            // 情况2，left的two比right的one要 小
+            // 情况2. left的two比right的one要 大 && left的two比right的two要 大
+            }else if (intervals[left][two] < intervals[right][one] && intervals[left][two] >= intervals[right][two]) {
+                // 那就把右指针数组的two 赋值给 答案数组的two
+                ansArr[arrRowNum][two] = intervals[left][two];
+                // 左、右指针都右移
+                left++;
+                right++;
+            // 情况3，left的two比right的one要 小
             }else if (intervals[left][two] < intervals[right][one]) {
                 // 答案数组指针 右移
                 arrRowNum++;
