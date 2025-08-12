@@ -30,43 +30,43 @@ public class Merge_56 {
 //
 class Solution56 {
     public int[][] merge(int[][] intervals) {
+        // 第一位第二位
         int one = 0,two = 1;
+        // 左、右指针
         int left = 0,right = 1;
+        // 答案数组右移指针
         int arrRowNum = 0;
         int [][] ansArr = new int [intervals.length][2];
+        // 先把第一个数组赋值给答案数组
+        ansArr[0] = intervals[0];
         while (right < intervals.length) {
-
-
-            // 情况1，left的two比right的one要 小
-            if (intervals[left][two] < intervals[right][one]) {
-                // 那就把第一个存进去，
-                ansArr[arrRowNum] = intervals[left];
-                // 如果到了数组最后一个，就把最后一个也存进去
-                if (right == intervals.length - 1) {
-                    ansArr[arrRowNum+1] = intervals[right];
-                }
-                // 目标数组位置 +1
-                arrRowNum++;
-                // 然后两个位置都++
+            // 情况1，left的two比right的one要 大
+            if (intervals[left][two] >= intervals[right][one]) {
+                // 那就把右指针数组的two 赋值给 答案数组的two
+                ansArr[arrRowNum][two] = intervals[right][two];
+                // 左、右指针都右移
                 left++;
                 right++;
-            // 情况2，left的two比right的one要 大
-            }else if (intervals[left][two] >= intervals[right][one]) {
-                // 那就把第一个的第一位 存目标第一位
-                ansArr[arrRowNum][0] = intervals[left][one];
-                // 那就把第二个的第二位 存目标第二位
-                ansArr[arrRowNum][1] = intervals[right][two];
-
-                // [小难点] 如果两个重合，那么有必要让第二个的one等于第一个的one，方便做下次判断
-                intervals[left][one] = intervals[right][one];
-
-                // 目标数组位置 +1
+            // 情况2，left的two比right的one要 小
+            }else if (intervals[left][two] < intervals[right][one]) {
+                // 答案数组指针 右移
                 arrRowNum++;
-                // 然后两个位置都++
+                // 左、右指针都右移
                 left++;
                 right++;
+                // 答案数组 one = left的one
+                ansArr[arrRowNum][one] = intervals[left][one];
+                // 答案数组 two = left的two
+                ansArr[arrRowNum][two] = intervals[left][two];
             }
         }
-        return ansArr;
+        // 以下这串代码是删除末尾 为0 的数组的
+        int i = ansArr.length - 1;
+        // 从后向前找到第一个非 [0, 0] 的子数组
+        while (i >= 0 && ansArr[i][0] == 0 && ansArr[i][1] == 0) {
+            i--;
+        }
+        // 截取从索引 0 到 i 的子数组（保留非零部分）
+        return Arrays.copyOf(ansArr, i + 1);
     }
 }
