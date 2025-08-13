@@ -1,9 +1,7 @@
 package Lc25_08.Lc25_08_15.Array;
 
 // [25.8.11(数组)] 合并区间
-
-import java.util.Arrays;
-import java.util.Comparator;
+import java.util.*;
 
 /**
  * <li>以数组 intervals 表示若干个区间的集合，其中单个区间为 intervals[i] = [start i, end i]。
@@ -32,15 +30,25 @@ public class Merge_56 {
 }
 
 
+// 看解析看的
 class Solution56 {
     public int[][] merge(int[][] intervals) {
-        int start = 0,end = 0;
-
+        // 答案数组右移指针
         // 数组为空返回空
         if (intervals.length == 0 )
-            return new int[0][0];
-
-        return intervals;
+            return new int[0][2];
+        // 先将整个二维数组按照 one位 从小到大 排列
+        Arrays.sort(intervals, Comparator.comparingInt(a -> a[0]));
+        // 最终数组
+        List<int[]> ansArr = new ArrayList<>();
+        for (int i = 0; i < intervals.length; i++) {
+            if (ansArr.isEmpty() || intervals[i][0] > ansArr.get(ansArr.size() - 1)[1]) {
+                ansArr.add(new int[]{intervals[i][0], intervals[i][1]});
+            }else {
+                ansArr.get(ansArr.size() - 1)[1] = Math.max(ansArr.get(ansArr.size() - 1)[1], intervals[i][1]);
+            }
+        }
+        return ansArr.toArray(new int[ansArr.size()][]);
     }
 }
 
