@@ -23,8 +23,25 @@ public class ContainsDuplicate_217 {
 }
 
 
+// 5.对方法2的改进，检测能不能成功存入set，能说明不重复，反之重复。这样快了很多
+class Solution217 {
+    public boolean containsDuplicate(int[] nums) {
+        boolean ans = false;
+        HashSet<Integer> intSet = new HashSet<>();
+        for (int num : nums) {
+            if (!intSet.add(num)) {
+                return  true;
+            }
+        }
+
+        return ans;
+    }
+}
+
+
 // 21ms  16%
 // 4.排序后，依次比较看看?
+/*
 class Solution217 {
     public boolean containsDuplicate(int[] nums) {
         boolean ans = false;
@@ -37,6 +54,7 @@ class Solution217 {
         return ans;
     }
 }
+*/
 
 
 // 15ms   56%
