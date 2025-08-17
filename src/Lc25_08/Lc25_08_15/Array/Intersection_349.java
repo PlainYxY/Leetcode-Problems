@@ -2,6 +2,8 @@ package Lc25_08.Lc25_08_15.Array;
 
 import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.HashSet;
+import java.util.Set;
 
 // [25.8.15](数组) 两个数组的交集
 /**
@@ -21,10 +23,25 @@ public class Intersection_349 {
 }
 
 
+// 2.将第一个数组放入Set，然后再在第二个里检测,最后遍历进数组
 class Solution349 {
     public int[] intersection(int[] nums1, int[] nums2) {
-
-        return  null;
+        Set<Integer> intSet1 = new HashSet<>();
+        Set<Integer> intSet2 = new HashSet<>();
+        for (int j : nums1) {
+            intSet1.add(j);
+        }
+        for (int k : nums2) {
+            if (intSet1.contains(k)) {
+                intSet2.add(k);
+            }
+        }
+        int[] res = new int[intSet2.size()];
+        int index = 0;
+        for (int num : intSet2) {
+            res[index++] = num;
+        }
+        return  res;
     }
 }
 
