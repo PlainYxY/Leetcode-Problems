@@ -17,16 +17,30 @@ public class MoveZeroes_283 {
         System.out.println(Arrays.toString(ints1));
         // [0]
         int[] ints2 = new int[]{0};
-        solution283.moveZeroes(ints1);
-        System.out.println(Arrays.toString(ints1));
+        solution283.moveZeroes(ints2);
+        System.out.println(Arrays.toString(ints2));
     }
 }
 
 
 // todo 无返回值
-// 1.
+// 1ms  100%
+// 1.把非零的依次放到数组前面，然后数组末位按0的个数，赋值0
 class Solution283 {
     public void moveZeroes(int[] nums) {
-
+        int num = 0;
+        for (int i = 0; i < nums.length; i++) {
+            if (nums[i] != 0) {
+                nums[num++] = nums[i];
+            }
+        }
+        // 0的个数
+        int zeroIndex = nums.length - num;
+        int index = nums.length-1;
+        while (zeroIndex > 0) {
+            nums[index] = 0;
+            index--;
+            zeroIndex--;
+        }
     }
 }
