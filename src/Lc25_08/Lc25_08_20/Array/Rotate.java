@@ -3,6 +3,9 @@ package Lc25_08.Lc25_08_20.Array;
 import java.util.Arrays;
 
 // [25.8.18](数组) 旋转数组
+/**
+ * <li>给定一个整数数组 nums，将数组中的元素向右轮转 k 个位置，其中 k 是非负数。
+ */
 public class Rotate {
     public static void main(String[] args) {
         Solution solution = new Solution();
