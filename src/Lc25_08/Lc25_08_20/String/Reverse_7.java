@@ -22,10 +22,20 @@ public class Reverse_7 {
 }
 
 
-//
+// 取模，颠倒，然后判断
+// 1ms  40%
 class Solution7 {
     public int reverse(int x) {
         int ans = 0;
+        int temp;
+        while (x != 0) {
+            if (ans > 214748364 || ans < -214748364) {
+                return 0;
+            }
+            temp = x%10;
+            ans = ans * 10 + temp;
+            x /= 10;
+        }
         return ans;
     }
 }
