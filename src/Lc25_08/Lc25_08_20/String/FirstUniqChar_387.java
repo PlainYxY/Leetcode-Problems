@@ -1,0 +1,30 @@
+package Lc25_08.Lc25_08_20.String;
+
+// [25.8.20](字符串) 字符串的第一个唯一字符
+/**
+ * <li>给定一个字符串 s ，找到 它的第一个不重复的字符，并返回它的索引 。如果不存在，则返回 -1 。
+ * <li>s 只包含小写字母
+ */
+public class FirstUniqChar_387 {
+    public static void main(String[] args) {
+        Solution387 solution387 = new Solution387();
+
+        // 0
+        System.out.println(solution387.firstUniqChar("leetcode"));
+        // 2
+        System.out.println(solution387.firstUniqChar("loveleetcode"));
+        // -1
+        System.out.println(solution387.firstUniqChar("aabb"));
+    }
+}
+// 放入set中，相同的删掉，之后遍历第一个
+// 或者放map里，找到不是-1（相同的赋值-1）的最小的value
+
+
+//
+class Solution387 {
+    public int firstUniqChar(String s) {
+        int ans = 0;
+        return ans;
+    }
+}
