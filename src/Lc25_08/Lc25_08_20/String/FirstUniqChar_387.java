@@ -1,5 +1,10 @@
 package Lc25_08.Lc25_08_20.String;
 
+import java.util.HashMap;
+import java.util.HashSet;
+import java.util.Map;
+import java.util.Set;
+
 // [25.8.20](字符串) 字符串的第一个唯一字符
 /**
  * <li>给定一个字符串 s ，找到 它的第一个不重复的字符，并返回它的索引 。如果不存在，则返回 -1 。
@@ -17,14 +22,37 @@ public class FirstUniqChar_387 {
         System.out.println(solution387.firstUniqChar("aabb"));
     }
 }
-// 放入set中，相同的删掉，之后遍历第一个
 // 或者放map里，找到不是-1（相同的赋值-1）的最小的value
 
 
-//
+// 2. 放map里，key为字母，value为下标，比较它下标最小的value
 class Solution387 {
     public int firstUniqChar(String s) {
         int ans = 0;
+        Map<Character, Integer> map = new HashMap<>();
+        for (int i = 0; i < s.length(); i++) {
+            map.put(s.charAt(i),i);
+        }
         return ans;
     }
 }
+
+
+// 33ms  21%
+// 1. 放map里，然后检测谁是第一个为1的key
+/*
+class Solution387 {
+    public int firstUniqChar(String s) {
+        int ans = -1;
+        Map<Character, Integer> map = new HashMap<>();
+        for (int i = 0; i < s.length(); i++) {
+            map.put(s.charAt(i), map.getOrDefault(s.charAt(i), 0) + 1);
+        }
+        for (int i = 0; i < s.length(); i++) {
+            if (map.get(s.charAt(i)) == 1) {
+                return i;
+            }
+        }
+        return ans;
+    }
+}*/
