@@ -1,9 +1,6 @@
 package Lc25_08.Lc25_08_20.String;
 
-import java.util.HashMap;
-import java.util.HashSet;
-import java.util.Map;
-import java.util.Set;
+import java.util.*;
 
 // [25.8.20](字符串) 字符串的第一个唯一字符
 /**
@@ -22,25 +19,11 @@ public class FirstUniqChar_387 {
         System.out.println(solution387.firstUniqChar("aabb"));
     }
 }
-// 或者放map里，找到不是-1（相同的赋值-1）的最小的value
-
-
-// 2. 放map里，key为字母，value为下标，比较它下标最小的value
-class Solution387 {
-    public int firstUniqChar(String s) {
-        int ans = 0;
-        Map<Character, Integer> map = new HashMap<>();
-        for (int i = 0; i < s.length(); i++) {
-            map.put(s.charAt(i),i);
-        }
-        return ans;
-    }
-}
+// 或者放map里，找到是1（只出现了一次）的最小的value
 
 
 // 33ms  21%
 // 1. 放map里，然后检测谁是第一个为1的key
-/*
 class Solution387 {
     public int firstUniqChar(String s) {
         int ans = -1;
@@ -55,4 +38,4 @@ class Solution387 {
         }
         return ans;
     }
-}*/
+}
