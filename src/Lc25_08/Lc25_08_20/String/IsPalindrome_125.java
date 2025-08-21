@@ -7,7 +7,7 @@ package Lc25_08.Lc25_08_20.String;
  * 字母和数字都属于字母数字字符。
  * 给你一个字符串 s，如果它是 回文串 ，返回 true ；否则，返回 false 。
  */
-public class IsAnagram_125 {
+public class IsPalindrome_125 {
     public static void main(String[] args) {
 
     }
