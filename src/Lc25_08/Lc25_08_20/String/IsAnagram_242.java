@@ -7,7 +7,7 @@ import java.util.*;
 /**
  * <li>给定两个字符串 s 和 t ，编写一个函数来判断 t 是否是 s 的 字母异位词。
  */
-public class Boolean_242 {
+public class IsAnagram_242 {
     public static void main(String[] args) {
         Solution242 solution242 = new Solution242();
 
