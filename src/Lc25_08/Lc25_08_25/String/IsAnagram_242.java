@@ -21,7 +21,7 @@ public class IsAnagram_242 {
 
 
 // 3ms  80%
-// 1.题解
+// 1.题解     todo toCharArray() 可以将字符串变为Char数组
 class Solution242 {
     public boolean isAnagram(String s, String t) {
         if (s.length() != t.length()) {
