@@ -4,6 +4,12 @@ import java.util.Arrays;
 import java.util.HashMap;
 import java.util.Map;
 
+// [25.8.24](字符串) 最长公共前缀
+
+/**
+ * <li>编写一个函数来查找字符串数组中的最长公共前缀。
+ * <li>如果不存在公共前缀，返回空字符串 ""。
+ */
 public class LongestCommonPrefix_14 {
     public static void main(String[] args) {
         Solution14 solution14 = new Solution14();
