@@ -10,15 +10,18 @@ public class LongestPalindrome_5 {
 
         // "bab"
         System.out.println(solution5.longestPalindrome("babad"));
-        // "bd"
+        // "bb"
         System.out.println(solution5.longestPalindrome("cbbd"));
     }
 }
 
 
-//
+// todo 解不出来，没思路
 class Solution5 {
     public String longestPalindrome(String s) {
+        for (int i = 0; i < s.length(); i++) {
+
+        }
         return "";
     }
 }
