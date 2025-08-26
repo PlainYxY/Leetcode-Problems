@@ -28,18 +28,20 @@ public class ReverseWords_151 {
 }
 
 
-//
+// 11ms   10%
+// 1.题友解法，todo Arrays.asList(s.split(" ")); 将字符串以 " "(空格)分割装进数组
+//                Collections.reverse(words);  反转数组
 class Solution151 {
     public String reverseWords(String s) {
         List<String> words = Arrays.asList(s.split(" "));
         Collections.reverse(words);
-        String ansString = "";
+        StringBuilder sb = new StringBuilder();
         for (String word : words) {
-            if (word.isEmpty()) {
-                ansString += word + " ";
+            if  (!word.equals("")) {
+                sb.append(word + " ");
             }
         }
-        return ansString;
+        return sb.deleteCharAt(sb.length() - 1).toString();
     }
 }
 
