@@ -23,7 +23,7 @@ public class GetConcatenation_1929 {
 }
 
 
-// 1.
+// 1ms  47%
 class Solution1929 {
     public int[] getConcatenation(int[] nums) {
         int[] ansArr = new int[nums.length * 2];
