@@ -20,7 +20,7 @@ public class TriangleType_3024 {
 }
 
 
-// 1ms  57%
+// 0ms  100%
 class Solution3024 {
     public String triangleType(int[] nums) {
         int one = nums[0], two = nums[1], three = nums[2];
@@ -29,11 +29,7 @@ class Solution3024 {
         else if (one == two && two == three) {
             return "equilateral";
         } else if (one + two > three && one + three > two && two + three > one) {
-              if (one == two && two != three) {
-                return "isosceles";
-            } else if (one == three && two != three) {
-                return "isosceles";
-            } else if (three == two && one != three) {
+              if (one == two || one == three || two == three) {
                 return "isosceles";
             }else
                 return "scalene";
