@@ -12,6 +12,8 @@ public class FindNumbers_1295 {
 }
 
 
+// 0ms  100%
+// TODO log函数
 class Solution1295 {
     public int findNumbers(int[] nums) {
         int ans = 0;
