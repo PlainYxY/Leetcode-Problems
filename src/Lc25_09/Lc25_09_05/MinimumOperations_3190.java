@@ -17,9 +17,16 @@ public class MinimumOperations_3190 {
 }
 
 
-//
+// 0ms  100%
+// 任何数只要不能被3整除都通过1步就能被3整除
 class Solution3190 {
     public int minimumOperations(int[] nums) {
-        return 0;
+        int ans = 0;
+        for (int num : nums) {
+            if (num % 3 != 0) {
+                ans++;
+            }
+        }
+        return ans;
     }
 }
