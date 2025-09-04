@@ -18,9 +18,15 @@ public class NumberOfEmployeesWhoMetTarget_2798 {
     }
 }
 
-//
+// 0ms  100%
 class Solution2798 {
     public int numberOfEmployeesWhoMetTarget(int[] hours, int target) {
-        return 0;
+        int ans = 0;
+        for (int num : hours) {
+            if (num >= target) {
+                ans++;
+            }
+        }
+        return ans;
     }
 }
