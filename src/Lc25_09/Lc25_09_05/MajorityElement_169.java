@@ -2,6 +2,7 @@ package Lc25_09.Lc25_09_05;
 
 // [25.9.4] 多数元素
 
+import java.util.Arrays;
 import java.util.HashMap;
 import java.util.Map;
 
@@ -21,7 +22,7 @@ public class MajorityElement_169 {
 }
 
 
-// 3.投票算法
+// 3. todo 投票算法
 /*
 class Solution169 {
     public int majorityElement(int[] nums) {
@@ -33,7 +34,8 @@ class Solution169 {
 // 2.排序，然后取中间值
 class Solution169 {
     public int majorityElement(int[] nums) {
-
+        Arrays.sort(nums);
+        return nums[nums.length/2];
     }
 }
 
