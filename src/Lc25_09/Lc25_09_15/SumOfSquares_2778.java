@@ -18,10 +18,15 @@ public class SumOfSquares_2778 {
 }
 
 
-//
+//1ms   100%
 class Solution2778 {
     public int sumOfSquares(int[] nums) {
-
-        return 0;
+        int ans = 0;
+        for (int i = 1; i <= nums.length; i++) {
+            if (nums.length % i == 0) {
+                ans += nums[i-1] * nums[i-1];
+            }
+        }
+        return ans;
     }
 }
