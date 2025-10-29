@@ -12,14 +12,17 @@ public class PrefixCount_2185 {
 }
 
 
-//
+
+// 0ms  100%
+// todo  x.startsWith(y,z)    该方法是用来检验 x 字符串是否是以指定的 y 字符串为前缀的，z是偏移量
 class Solution2185 {
     public int prefixCount(String[] words, String pref) {
+        int ans = 0;
         for (String word : words) {
-            if (word.startsWith(pref)) {
-
+            if (word.startsWith(pref,2)) {
+                ans++;
             }
         }
-        return words.length;
+        return ans;
     }
 }
