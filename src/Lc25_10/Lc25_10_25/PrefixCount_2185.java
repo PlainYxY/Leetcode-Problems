@@ -1,5 +1,6 @@
 package Lc25_10.Lc25_10_25;
 
+// [25.10.25] 统计包含给定的前缀字符串
 public class PrefixCount_2185 {
     public static void main(String[] args) {
         Solution2185 solution2185 = new Solution2185();
