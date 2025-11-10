@@ -21,6 +21,24 @@ public class DuplicateNumbersXOR_3158 {
 class Solution3158 {
     public int duplicateNumbersXOR(int[] nums) {
         int ans = 0;
+        int[] ints = new int[51];
+        for (int num : nums) {
+            ints[num]++;
+        }
+        for (int i = 0; i < 51; i++) {
+            if(ints[i] == 2){
+                ans ^= i;
+            }
+        }
+        return ans;
+    }
+}
+
+
+/*
+class Solution3158 {
+    public int duplicateNumbersXOR(int[] nums) {
+        int ans = 0;
         Set<Integer> set = new HashSet<>();
         for (int num : nums) {
             if (set.contains(num) && ans == 0) {
@@ -32,4 +50,4 @@ class Solution3158 {
         }
         return ans;
     }
-}
+}*/
