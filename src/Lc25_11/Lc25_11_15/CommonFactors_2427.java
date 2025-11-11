@@ -1,5 +1,6 @@
 package Lc25_11.Lc25_11_15;
 
+// [25.11.11] 公因子的数目
 public class CommonFactors_2427 {
     public static void main(String[] args) {
         Solution2427 solution2427 = new Solution2427();
