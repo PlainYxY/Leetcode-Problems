@@ -19,7 +19,7 @@ public class Max_Heap {
 
     // 建立 大根堆     建堆 的时间复杂度为 O(n)
     static void BuildMaxHeap(int[] Arr){
-        for (int i = (Arr.length/2); i > 0; i--) {
+        for (int i = (Arr.length-1)/2; i > 0; i--) {
             HeadAdjust(Arr,i, Arr.length-1);
         }
         Arr[0] = 0;
